@@ -18,10 +18,10 @@ bg.scale = 1.3
 
 //Crear bases superiores e inferiores
 bottomGround = createSprite(200,390,800,20);
-bottomGround.visible = false;
+bottomGround.visible = true;
 
 topGround = createSprite(200,10,800,20);
-topGround.visible = false;
+topGround.visible = true;
       
 //Crear globo      
 balloon = createSprite(100,200,20,50);
@@ -36,13 +36,11 @@ function draw() {
   
   background("black");
         
-          //Hacer brincar el globo aerostático
-          if(keyDown("space")) {
-            balloon.velocityX= -6 ;
-            
+          if(keyDown()) {
+                       
           }
 
-          //Añadir gravedad
+          //gravedad
            balloon.velocityY = balloon.velocityX+2;
    
         drawSprites();
